@@ -135,3 +135,22 @@ Processing by ArticlesController#create as HTML
   [1m[36m (19.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.60.187:41162/articles/1
 Completed 302 Found in 28ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/articles/1" for 72.194.113.55 at 2018-09-22 23:21:59 +0000
+Cannot render console from 72.194.113.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1/edit" for 72.194.113.55 at 2018-09-22 23:22:00 +0000
+Cannot render console from 72.194.113.55! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.1ms)
